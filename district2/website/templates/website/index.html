@@ -58,20 +58,52 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline mb-5">
                         <p class="text-white-75">Conservative Vision. Helping Others Succeed.</p>
-                        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                        <a class="btn btn-primary btn-xl" href="#about" style="background-color: white; color: black;">Find Out More</a>
                     </div>
                 </div>
             </div>
         </header>
         
         <!-- About-->
-        <section class="page-section bg-primary" id="about">
+        <section class="page-section" style="background-color: #3498db;" id="about">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 text-center">
                         <h2 class="text-white mt-0">Meet Jeremy.</h2>
                         <hr class="divider divider-light" />
-                        <p class="text-white-75 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
+        
+                        <!-- Photo placeholders -->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="/static/assets/img/portfolio/gettoknow/1.jpg" alt="Photo 1" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="/static/assets/img/portfolio/gettoknow/2.jpg" alt="Photo 2" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="/static/assets/img/portfolio/gettoknow/3.jpg" alt="Photo 3" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="/static/assets/img/portfolio/gettoknow/4.jpg" alt="Photo 4" class="img-fluid rounded-circle">
+                            </div>
+                        </div>
+                        <hr class="divider divider-light" />
+                        <p class="text-white-75 mb-4">
+                            Jeremy is a pastor at Christ Place Church in Lincoln, NE. He enjoys running, reading, camping at Branched Oak Lake, and hunting.
+                            While Jeremy has spent most of his adult life leading church ministries, he has also built and sold a business, hiked the Appalachian Trail, 
+                            and holds a Bachelor's degree in Criminal Justice and Business from the University of Arkansas, as well as a Master's in Theology from Southwestern Assemblies of God University.
+                        </p>
+                        <br>
+                        <p class="text-white-75 mb-4">
+                            Before moving to Nebraska Jeremy volunteered with the Arkansas State Patrol as a chaplain. He's worked in public schools,
+                            and with unions both as a union member and in management. Without fail Jeremy believes in living with integrity and doing the right things
+                            especially when it is difficult.
+                        </p>
+                        <br>
+                        <p class="text-white-75 mb-4">
+                            Jeremy and wife, Dawn, have three children, Judah, James, and Haven.
+                        </p>
+                        
                         <a class="btn btn-light btn-xl" href="#services">Issues Important To Jeremy</a>
                     </div>
                 </div>
@@ -100,7 +132,7 @@
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
                             <div class="mb-2"><i class="bi-cash fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Fiscal Responsibility</h3>
+                            <h3 class="h4 mb-2">Eliminate Wasteful Spending</h3>
                             <p class="text-muted mb-0">Did you know Lancaster County will spend $167,825,100 in 2024? Jeremy realizes that each dollar is for the benefit of every Lancaster citizen and will appropriate and fund initiatives responsibly and ethically.</p>
                         </div>
                     </div>
@@ -178,8 +210,8 @@
             </div>
         </div> -->
         <!-- Call to action-->
-        <section class="page-section bg-dark text-white">
-            <div class="container px-4 px-lg-5 text-center">
+        <section class="page-section bg-dark text-white" id="portfolio">
+            <div  class="container px-4 px-lg-5 text-center">
                 <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
                 <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
             </div>
@@ -229,25 +261,8 @@
                                 <label for="message">Message</label>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
+                            
+                            <div class="d-grid"><button class="btn btn-primary btn-xl" style="background-color: #e81d25; color: white;" id="submitButton" type="submit">Submit</button></div>
                         </form>
                     </div>
                 </div>
@@ -261,7 +276,7 @@
         </section>
         <!-- Footer-->
         <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div></div>
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Paid for by Jeremy Kuehn For Lancaster Board</div></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -269,10 +284,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
         <script src="static/js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        
     </body>
 </html>
