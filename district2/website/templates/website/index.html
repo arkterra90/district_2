@@ -24,15 +24,26 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="static/css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- <style>
+        .navbar-logo {
+            max-height: 40px; /* Adjust the max-height as needed */
+            width: auto; /* Allow the width to scale proportionally with the height */
+        }
+    </style> -->
+    
 
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav" role="navigation" style="max-height: 80px;">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#page-top">Jeremy Kuehn For Lancaster County Commissioner District 2</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <a class="navbar-brand" href="#page-top">
+                <img src="static/assets/logos/logo1.png" class="navbar-logo" alt="Jeremy Logo" style="width: 150px; max-height: 90%;">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -43,6 +54,8 @@
             </div>
         </div>
     </nav>
+    
+    
 
     <!-- Masthead-->
     <header class="masthead">
