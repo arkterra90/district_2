@@ -13,3 +13,5 @@ class ContactForm(models.Model):
 
     def __str__(self):
         return f"{self.formName} {self.formEmail} {self.formPhone} {self.formMessage} {self.formVolunteer} {self.formYardSign} {self.formDoorHangers} {self.formLargeSign} {self.formMeetAndGreet}"
+    
+
