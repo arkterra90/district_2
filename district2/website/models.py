@@ -15,3 +15,14 @@ class ContactForm(models.Model):
         return f"{self.formName} {self.formEmail} {self.formPhone} {self.formMessage} {self.formVolunteer} {self.formYardSign} {self.formDoorHangers} {self.formLargeSign} {self.formMeetAndGreet}"
     
 
+class blogPost(models.Model):
+
+    author = models.CharField(max_length=15)
+    dateMade = models.DateField()
+    title = models.CharField(max_length=45)
+    text = models.TextField()
+    photo = models.ImageField()
+
+
+    def __str__(self):
+        return f"{self.id} {self.author} {self.dateMade} {self.text} {self.photo}"

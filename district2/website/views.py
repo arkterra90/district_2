@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
-from .models import ContactForm 
+from .models import ContactForm, blogPost
 
 # Create your views here.
 def index(request):
@@ -44,3 +44,18 @@ def handle_form_submission(request):
             return JsonResponse({'error': f'Error decoding JSON: {str(e)}'}, status=400)
     else:
         return JsonResponse({'error': 'Invalid request method.'}, status=405)
+    
+
+def blogHome(request):
+# Query for all blog posts, ordering them by publication date (newest first)
+    blog_entries = blogPost.objects.all().order_by('-dateMade')
+    # Pass the blog entries to the template context
+    context = {'blog_entries': blog_entries}
+    return render(request, "website/bloghome.html", context)
+
+def blogEntry(request, postID):
+
+    post = blogPost.objects.get(id=postID)
+
+    context = {'post': post}
+    return render(request, 'website/blogpost.html', context)
