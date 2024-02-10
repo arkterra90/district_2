@@ -2,7 +2,29 @@
 {% load static %}
 
 {% block body %}
+<div style="height: 100px;"></div>
 
-{{post}}
+<div class="container mt-5">
+    <!-- Blog Post Header -->
+    <header class="blog-post-header">
+        <h1 class="blog-post-title">{{ post.title }}</h1>
+        <div class="blog-post-meta">
+            <span class="blog-post-author">By {{ post.author }}</span> |
+            <span class="blog-post-date">{{ post.dateMade|date:"F d, Y" }}</span>
+        </div>
+    </header>
+    
+    <!-- Blog Post Image -->
+    {% if post.photo %}
+    <div class="blog-post-image text-center">
+        <img src="{{ post.photo.url }}" alt="{{ post.title }}" class="img-fluid blog-post-image">
+    </div>
+    {% endif %}
+
+    <!-- Blog Post Content -->
+    <div class="blog-post-text">
+        {{ post.text|linebreaks }}
+    </div>
+</div>
 
 {% endblock %}

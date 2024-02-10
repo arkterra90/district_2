@@ -10,6 +10,22 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ /* Spacer div to create space at the top */
+.spacer-div {
+  height: 100px;
+}
+
+/* Blog post image styling */
+.blog-post-image img {
+  max-width: 100%; /* Ensures the image is never wider than its container */
+  max-height: 200px; /* Sets a maximum height to make the image smaller */
+  object-fit: cover; /* Adjusts the display of the image within the constraints of max-width and max-height without distorting its aspect ratio */
+  width: auto; /* Ensures the width of the image is auto-adjusted according to the max-height */
+  height: auto; /* Ensures the height of the image is auto-adjusted */
+  margin-bottom: 20px; /* Optional: Adds some space below the image */
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
