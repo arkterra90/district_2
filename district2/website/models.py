@@ -21,7 +21,7 @@ class blogPost(models.Model):
     dateMade = models.DateField()
     title = models.CharField(max_length=45)
     text = models.TextField()
-    photo = models.ImageField()
+    photo = models.ImageField(blank=True, null=True)
 
 
     def __str__(self):

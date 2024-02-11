@@ -7,7 +7,7 @@
 <div class="container mt-5">
     <!-- Blog Post Header -->
     <header class="blog-post-header">
-        <h1 class="blog-post-title">{{ post.title }}</h1>
+        <h1 class="blog-post-title">{{ post.title|title}}</h1>
         <div class="blog-post-meta">
             <span class="blog-post-author">By {{ post.author }}</span> |
             <span class="blog-post-date">{{ post.dateMade|date:"F d, Y" }}</span>
