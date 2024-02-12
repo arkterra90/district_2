@@ -25,6 +25,17 @@
     <div class="blog-post-text">
         {{ post.text|linebreaks }}
     </div>
+
+    <div style="border-bottom: 1px solid black; padding-top: 10px; padding-bottom: 10px;"></div>
+
+    <div class="other-entries" style="padding-top: 10px;">
+        <h3>Other Blog Entries</h3>
+        <ul class="other-entries-list">
+            {% for entry in other_entries %}
+            <li><a href="{% url 'website:blogEntry' postID=entry.id %}">{{ entry.title|title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
 
 {% endblock %}
