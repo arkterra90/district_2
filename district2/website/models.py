@@ -19,7 +19,7 @@ class blogPost(models.Model):
 
     author = models.CharField(max_length=15)
     dateMade = models.DateField()
-    title = models.CharField(max_length=45)
+    title = models.CharField(max_length=150)
     text = models.TextField()
     photo = models.ImageField(blank=True, null=True)
 

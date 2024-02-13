@@ -5,9 +5,7 @@
 <header class="masthead">
     <div class="container px-4 px-lg-5 h-100">
         <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-8 align-self-end mt-5">
-                <br>
-                <br class="mb-5">
+            <div class="col-lg-8 align-self-end">
                 <br>
                 <br>
                 <br>
@@ -17,11 +15,11 @@
                 <br>
                 <br>
                 <br>
-                <h3 class="text-white font-weight-bold">Jeremy Kuehn | Campaign Blog</h3>
-                <hr class="divider" />
+                <h1 class="text-white font-weight-bold mt-5">Jeremy Kuehn | Campaign Blog</h1>
+                <hr class="divider my-4" />
             </div>
-            <div class="col-lg-8 align-self-baseline mb-5">
-                <p class="text-white-75">Conservative Vision. Helping Others Succeed.</p>
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white-75 fs-5 mb-5">Conservative Vision. Helping Others Succeed.</p>
             </div>
         </div>
     </div>
@@ -31,25 +29,24 @@
     <div class="row">
         {% for entry in blog_entries %}
             <div class="col-md-4 mb-4">
-                <div class="card h-100">
+                <article class="card h-100">
                     {% if entry.photo %}
-                        <img src="{{ entry.photo.url }}" class="card-img-top" alt="{{ entry.title }}">
+                        <img src="{{ entry.photo.url }}" class="card-img-top" alt="Blog post image: {{ entry.title }}">
                     {% endif %}
                     <div class="card-body">
                         <h5 class="card-title">{{ entry.title }}</h5>
                         <p class="card-text">{{ entry.text|truncatewords:20 }}</p>
-                        <a href="{% url 'website:blogEntry' postID=entry.id %}" class="btn btn-dark btn-l">Read More</a>
+                        <a href="{% url 'website:blogEntry' postID=entry.id %}" class="btn btn-primary">Read More</a>
                     </div>
                     <div class="card-footer text-muted">
-                        Posted on {{ entry.dateMade|date:"F d, Y" }} by {{ entry.author }}
+                        Posted on <time datetime="{{ entry.dateMade|date:"Y-m-d" }}">{{ entry.dateMade|date:"F d, Y" }}</time> by {{ entry.author }}
                     </div>
-                </div>
+                </article>
             </div>
         {% empty %}
             <p class="text-center">No blog entries found.</p>
         {% endfor %}
     </div>
 </main>
-
 
 {% endblock %}

@@ -57,5 +57,11 @@ def blogEntry(request, postID):
 
     post = blogPost.objects.get(id=postID)
 
-    context = {'post': post}
+    other_entries = blogPost.objects.exclude(id=postID).order_by('-dateMade')[:10]
+
+    context = {
+        'post': post,
+        'other_entries': other_entries,  # Add the other entries to the context
+    }   
+     
     return render(request, 'website/blogpost.html', context)
