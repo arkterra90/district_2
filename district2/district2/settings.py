@@ -26,8 +26,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 from django.core.management.utils import get_random_secret_key
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+#ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+DJANGO_ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+
+# Add 'www.jeremykuehn.com' to the allowed hosts
 DJANGO_ALLOWED_HOSTS.append('www.jeremykuehn.com')
+
+# Update ALLOWED_HOSTS with DJANGO_ALLOWED_HOSTS
+ALLOWED_HOSTS = DJANGO_ALLOWED_HOSTS
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
